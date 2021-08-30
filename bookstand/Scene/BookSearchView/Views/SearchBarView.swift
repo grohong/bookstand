@@ -18,7 +18,10 @@ public final class SearchBarView: UIView {
 
     private let searchImageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(systemName: "magnifyingglass")
+        $0.image = UIImage(
+            systemName: "magnifyingglass",
+            withConfiguration: UIImage.SymbolConfiguration(weight: .medium)
+        )
         $0.contentMode = .scaleAspectFit
         $0.tintColor = .systemGray
         $0.setContentHuggingPriority(.required, for: .horizontal)
@@ -43,6 +46,8 @@ public final class SearchBarView: UIView {
         $0.setTitle("Cancel", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
         $0.isHidden = true
+        $0.setContentHuggingPriority(.required, for: .horizontal)
+        $0.setContentCompressionResistancePriority(.required, for: .horizontal)
         return $0
     }(UIButton())
 
@@ -81,15 +86,27 @@ public final class SearchBarView: UIView {
         contanierView.addSubview(searchImageView)
         NSLayoutConstraint.activate([
             searchImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            searchImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            searchImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            searchImageView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            searchImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
+
+        NSLayoutConstraint(
+            item: searchImageView,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: searchImageView,
+            attribute: .width,
+            multiplier: 1,
+            constant: 0
+        ).isActive = true
 
         contanierView.addSubview(textField)
         NSLayoutConstraint.activate([
             textField.leftAnchor.constraint(equalTo: searchImageView.rightAnchor, constant: 5),
             textField.topAnchor.constraint(equalTo: topAnchor),
             textField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            textField.rightAnchor.constraint(equalTo: rightAnchor)
+            textField.rightAnchor.constraint(equalTo: contanierView.rightAnchor)
         ])
     }
 
