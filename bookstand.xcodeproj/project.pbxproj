@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		764D872326DD2074008F448E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D872226DD2074008F448E /* SearchBarView.swift */; };
 		76A5135426D3EE9B0086CE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5135326D3EE9B0086CE18 /* AppDelegate.swift */; };
 		76A5135626D3EE9B0086CE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5135526D3EE9B0086CE18 /* SceneDelegate.swift */; };
-		76A5135826D3EE9B0086CE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5135726D3EE9B0086CE18 /* ViewController.swift */; };
+		76A5135826D3EE9B0086CE18 /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5135726D3EE9B0086CE18 /* BookSearchViewController.swift */; };
 		76A5135D26D3EE9C0086CE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A5135C26D3EE9C0086CE18 /* Assets.xcassets */; };
 		76A5136026D3EE9C0086CE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A5135E26D3EE9C0086CE18 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		764D872226DD2074008F448E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		76A5135026D3EE9B0086CE18 /* bookstand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookstand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A5135326D3EE9B0086CE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A5135526D3EE9B0086CE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76A5135726D3EE9B0086CE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76A5135726D3EE9B0086CE18 /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 		76A5135C26D3EE9C0086CE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A5135F26D3EE9C0086CE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A5136126D3EE9C0086CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +37,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		764D871F26DD2044008F448E /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				764D872026DD2054008F448E /* BookSearchView */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		764D872026DD2054008F448E /* BookSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				76A5135726D3EE9B0086CE18 /* BookSearchViewController.swift */,
+				764D872126DD2060008F448E /* Views */,
+			);
+			path = BookSearchView;
+			sourceTree = "<group>";
+		};
+		764D872126DD2060008F448E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				764D872226DD2074008F448E /* SearchBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		76A5134726D3EE9B0086CE18 = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +84,7 @@
 				76A5136826D3EF3A0086CE18 /* Resources */,
 				76A5136726D3EF2F0086CE18 /* SupportingFiles */,
 				76A5136926D3EF470086CE18 /* Entry */,
-				76A5135726D3EE9B0086CE18 /* ViewController.swift */,
+				764D871F26DD2044008F448E /* Scene */,
 			);
 			path = bookstand;
 			sourceTree = "<group>";
@@ -157,7 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76A5135826D3EE9B0086CE18 /* ViewController.swift in Sources */,
+				764D872326DD2074008F448E /* SearchBarView.swift in Sources */,
+				76A5135826D3EE9B0086CE18 /* BookSearchViewController.swift in Sources */,
 				76A5135426D3EE9B0086CE18 /* AppDelegate.swift in Sources */,
 				76A5135626D3EE9B0086CE18 /* SceneDelegate.swift in Sources */,
 			);
